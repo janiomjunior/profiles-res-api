@@ -28,6 +28,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
             name=validated_data['name'],
             password=validated_data['password']
         )
+        return user
     
     def update(self, instance, validated_data):
         """Handle updating user account"""
@@ -37,4 +38,4 @@ class UserProfileSerializer(serializers.ModelSerializer):
  
         return super().update(instance, validated_data)
 
-        return user
+        
